@@ -1,0 +1,291 @@
+[
+  {
+    "name": "user",
+    "fields": [
+      {
+        "name": "name",
+        "type": "text",
+        "description": "User full name",
+        "options": null
+      },
+      {
+        "name": "email",
+        "type": "text",
+        "description": "User email address",
+        "options": null
+      },
+      {
+        "name": "password",
+        "type": "text",
+        "description": "User password",
+        "options": null
+      },
+      {
+        "name": "role",
+        "type": "text",
+        "description": "User role",
+        "options": [
+          "tenant",
+          "owner",
+          "admin"
+        ]
+      }
+    ]
+  },
+  {
+    "name": "property",
+    "fields": [
+      {
+        "name": "title",
+        "type": "text",
+        "description": "Property title",
+        "options": null
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "description": "Detailed property description",
+        "options": null
+      },
+      {
+        "name": "rent_price",
+        "type": "number",
+        "description": "Monthly rent price",
+        "options": null
+      },
+      {
+        "name": "city",
+        "type": "text",
+        "description": "City or location",
+        "options": null
+      },
+      {
+        "name": "type",
+        "type": "text",
+        "description": "Type of property (e.g., Apartment, House)",
+        "options": [
+          "Apartment",
+          "House",
+          "Villa",
+          "Studio",
+          "Condo"
+        ]
+      },
+      {
+        "name": "bedrooms",
+        "type": "number",
+        "description": "Number of bedrooms",
+        "options": null
+      },
+      {
+        "name": "bathrooms",
+        "type": "number",
+        "description": "Number of bathrooms",
+        "options": null
+      },
+      {
+        "name": "furnished",
+        "type": "bool",
+        "description": "Is the property furnished?",
+        "options": null
+      },
+      {
+        "name": "amenities",
+        "type": "array",
+        "description": "List of amenities",
+        "options": null
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "description": "Availability status",
+        "options": [
+          "Available",
+          "Rented",
+          "Hidden"
+        ]
+      },
+      {
+        "name": "images",
+        "type": "array",
+        "description": "List of image URLs",
+        "options": null
+      },
+      {
+        "name": "owner_id",
+        "type": "text",
+        "description": "Trickle user ID of the property owner",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "favorite",
+    "fields": [
+      {
+        "name": "user_id",
+        "type": "text",
+        "description": "Trickle user ID of the tenant",
+        "options": null
+      },
+      {
+        "name": "property_id",
+        "type": "text",
+        "description": "Trickle object ID of the property",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "conversation",
+    "fields": [
+      {
+        "name": "tenant_id",
+        "type": "text",
+        "description": "Tenant User ID",
+        "options": null
+      },
+      {
+        "name": "owner_id",
+        "type": "text",
+        "description": "Owner User ID",
+        "options": null
+      },
+      {
+        "name": "property_id",
+        "type": "text",
+        "description": "Property ID associated with the conversation",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "message",
+    "fields": [
+      {
+        "name": "conversation_id",
+        "type": "text",
+        "description": "ID of the parent conversation",
+        "options": null
+      },
+      {
+        "name": "sender_id",
+        "type": "text",
+        "description": "User ID of the sender",
+        "options": null
+      },
+      {
+        "name": "content",
+        "type": "text",
+        "description": "Message text content",
+        "options": null
+      },
+      {
+        "name": "is_read",
+        "type": "bool",
+        "description": "Read status of the message",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "maintenance",
+    "fields": [
+      {
+        "name": "property_id",
+        "type": "text",
+        "description": "Property ID",
+        "options": null
+      },
+      {
+        "name": "tenant_id",
+        "type": "text",
+        "description": "Tenant User ID",
+        "options": null
+      },
+      {
+        "name": "title",
+        "type": "text",
+        "description": "Issue title",
+        "options": null
+      },
+      {
+        "name": "description",
+        "type": "text",
+        "description": "Issue description",
+        "options": null
+      },
+      {
+        "name": "urgency",
+        "type": "text",
+        "description": "Urgency level",
+        "options": [
+          "Low",
+          "Medium",
+          "High"
+        ]
+      },
+      {
+        "name": "status",
+        "type": "text",
+        "description": "Current status of the request",
+        "options": [
+          "Pending",
+          "In Progress",
+          "Resolved"
+        ]
+      },
+      {
+        "name": "image",
+        "type": "text",
+        "description": "Optional image URL for the issue",
+        "options": null
+      }
+    ]
+  },
+  {
+    "name": "notification",
+    "fields": [
+      {
+        "name": "user_id",
+        "type": "text",
+        "description": "User ID receiving the notification",
+        "options": null
+      },
+      {
+        "name": "title",
+        "type": "text",
+        "description": "Notification title",
+        "options": null
+      },
+      {
+        "name": "message",
+        "type": "text",
+        "description": "Notification content",
+        "options": null
+      },
+      {
+        "name": "is_read",
+        "type": "bool",
+        "description": "Read status",
+        "options": null
+      },
+      {
+        "name": "link",
+        "type": "text",
+        "description": "Link to navigate when clicked",
+        "options": null
+      },
+      {
+        "name": "type",
+        "type": "text",
+        "description": "Type of notification",
+        "options": [
+          "message",
+          "maintenance",
+          "system"
+        ]
+      }
+    ]
+  }
+]
